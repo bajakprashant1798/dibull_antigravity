@@ -1,0 +1,136 @@
+.service-header {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    background: radial-gradient(circle at top center, rgba(124, 58, 237, 0.1), transparent 70%);
+}
+
+.service-hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    padding-bottom: 6rem;
+}
+
+/* Sidebar */
+.sidebar-nav {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+.sidebar-links li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-links a {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.sidebar-links a:hover {
+    background: var(--glass-highlight);
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.sidebar-cta {
+    text-align: center;
+    padding: 2rem;
+}
+
+.sidebar-cta h4 {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.service-content h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-content h2:first-child {
+    margin-top: 0;
+}
+
+.service-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.service-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.service-content li {
+    margin-bottom: 0.5rem;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.pricing-table th,
+.pricing-table td {
+    border: 1px solid var(--glass-border);
+    padding: 1rem;
+    text-align: left;
+}
+
+.pricing-table th {
+    background: var(--glass-bg);
+    color: var(--text-primary);
+}
+
+.pricing-table td {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-sidebar {
+        order: -1;
+        /* Sidebar on top on mobile specifically for nav, or bottom? Maybe bottom is better for UX flow */
+        order: 1;
+    }
+}

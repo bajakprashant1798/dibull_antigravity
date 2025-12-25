@@ -1,0 +1,145 @@
+.tech-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.tech-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.tech-content {
+    flex: 1;
+}
+
+.tech-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.tech-features {
+    margin-bottom: 2.5rem;
+}
+
+.tech-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.check {
+    color: var(--accent-primary);
+    font-weight: 800;
+    background: rgba(124, 58, 237, 0.1);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.tech-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tech-card-main {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-header {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tech-header .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: #ef4444;
+}
+
+.dot.yellow {
+    background: #eab308;
+}
+
+.dot.green {
+    background: #22c55e;
+}
+
+.tech-graph {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex: 1;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 1rem;
+}
+
+.graph-bar {
+    width: 12%;
+    background: var(--glass-border);
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+
+.graph-bar.active {
+    background: linear-gradient(to top, var(--accent-primary), var(--accent-secondary));
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+.tech-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tech-stat span:first-child {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.tech-value {
+    color: #22c55e;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .tech-container {
+        flex-direction: column;
+    }
+
+    .tech-content {
+        text-align: center;
+    }
+
+    .tech-features {
+        display: inline-block;
+        text-align: left;
+    }
+}

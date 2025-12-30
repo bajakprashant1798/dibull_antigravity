@@ -1,0 +1,95 @@
+.tech-section {
+    background: #0b1720;
+    /* Dark Navy Background */
+    color: white;
+}
+
+.tech-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.tech-title {
+    color: white;
+    /* Override default heading color */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-desc {
+    color: #a0aec0;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.tech-features {
+    margin-bottom: 2.5rem;
+}
+
+.tech-features li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.tech-features li::before {
+    content: '✓';
+    color: #22c55e;
+    margin-right: 0.75rem;
+    font-weight: bold;
+}
+
+.platform-mockup {
+    background: #1a202c;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2d3748;
+}
+
+.mockup-header {
+    background: #2d3748;
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #4a5568;
+}
+
+.mockup-body {
+    padding: 1.5rem;
+    min-height: 300px;
+}
+
+.graph-placeholder {
+    height: 150px;
+    background: linear-gradient(90deg, #2c3e50 0%, #207de9 100%);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+}
+
+.metrics-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.metric-box {
+    flex: 1;
+    height: 80px;
+    background: #2d3748;
+    border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+    .tech-container {
+        grid-template-columns: 1fr;
+    }
+}

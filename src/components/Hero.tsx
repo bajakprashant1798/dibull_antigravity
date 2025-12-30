@@ -1,38 +1,85 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+    const [activeSegment, setActiveSegment] = useState('acquisition');
+
+    const content = {
+        acquisition: {
+            title: "Stay Visible & Drive Traffic",
+            desc: "Get your brand in front of ready-to-buy customers in Search and AI."
+        },
+        pipeline: {
+            title: "Accelerate Your Pipeline",
+            desc: "Turn traffic into qualified leads with conversion rate optimization."
+        },
+        revenue: {
+            title: "Close More Revenue",
+            desc: "Connect marketing data to sales outcomes to prove ROI."
+        },
+        ai: {
+            title: "Make Smarter Decisions",
+            desc: "Leverage AI to predict trends and optimize ad spend automatically."
+        }
+    };
+
     return (
-        <section className="hero">
-            <div className="hero-bg">
-                <div className="gradient-blob blob-1"></div>
-                <div className="gradient-blob blob-2"></div>
-            </div>
+        <section className="flywheel-hero">
+            <div className="container flywheel-container">
+                <div className="flywheel-text-content">
+                    <h1 className="flywheel-main-headline">
+                        Your Revenue Growth Partner in the <span className="highlight">Note AI Era</span>
+                    </h1>
 
-            <div className="container hero-content">
-                <h1 className="hero-title">
-                    Digital Marketing That <br />
-                    <span className="text-gradient">Drives Revenue.</span>
-                </h1>
+                    <div className="dynamic-content-box">
+                        <div className={`dynamic-text fade-in`}>
+                            <h3>{content[activeSegment as keyof typeof content].title}</h3>
+                            <p>{content[activeSegment as keyof typeof content].desc}</p>
+                        </div>
+                    </div>
 
-                <p className="hero-subtitle">
-                    Stop reporting clicks. Start reporting revenue. We combine proprietary technology with expert strategy to build your brand and your bottom line.
-                </p>
-
-                <div className="hero-actions">
-                    <Link to="/proposal" className="btn btn-primary">Send Me a Proposal</Link>
-                    <Link to="/results" className="btn btn-outline">View Our Work</Link>
+                    <div className="flywheel-cta-group">
+                        <form className="mini-proposal-form">
+                            <input type="text" placeholder="Enter your website" />
+                            <button type="button" className="btn btn-primary">Get My Free Proposal</button>
+                        </form>
+                    </div>
                 </div>
 
-                <div className="hero-trust">
-                    <p className="trust-label">Trusted by industry leaders</p>
-                    <div className="trust-logos">
-                        {/* Simple text placeholders for logos for now, or could use basic svgs */}
-                        <span className="trust-logo">GOOGL</span>
-                        <span className="trust-logo">AMZN</span>
-                        <span className="trust-logo">MSFT</span>
-                        <span className="trust-logo">META</span>
-                        <span className="trust-logo">TSLA</span>
+                <div className="flywheel-graphic-wrapper">
+                    <div className="flywheel-circle">
+                        {/* Center Core */}
+                        <div className="flywheel-center">
+                            <span className="revenue-engine-label">Dibull Revenue Engine</span>
+                            <span className="growth-stat">15% Higher Lead Growth</span>
+                            <button className="play-btn">▶</button>
+                        </div>
+
+                        {/* Segments - Simplified CSS representation */}
+                        <div
+                            className={`segment segment-acquisition ${activeSegment === 'acquisition' ? 'active' : ''}`}
+                            onMouseEnter={() => setActiveSegment('acquisition')}
+                        >
+                            <span className="segment-label">Acquisition</span>
+                        </div>
+                        <div
+                            className={`segment segment-pipeline ${activeSegment === 'pipeline' ? 'active' : ''}`}
+                            onMouseEnter={() => setActiveSegment('pipeline')}
+                        >
+                            <span className="segment-label">Pipeline</span>
+                        </div>
+                        <div
+                            className={`segment segment-revenue ${activeSegment === 'revenue' ? 'active' : ''}`}
+                            onMouseEnter={() => setActiveSegment('revenue')}
+                        >
+                            <span className="segment-label">Revenue</span>
+                        </div>
+                        <div
+                            className={`segment segment-ai ${activeSegment === 'ai' ? 'active' : ''}`}
+                            onMouseEnter={() => setActiveSegment('ai')}
+                        >
+                            <span className="segment-label">AI Intelligence</span>
+                        </div>
                     </div>
                 </div>
             </div>

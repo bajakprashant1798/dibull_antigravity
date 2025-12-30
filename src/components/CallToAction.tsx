@@ -1,22 +1,19 @@
-import { Link } from 'react-router-dom';
 import './CallToAction.css';
 
 const CallToAction = () => {
     return (
-        <section id="contact" className="section cta-section">
+        <section className="cta-section section">
             <div className="container">
-                <div className="cta-content glass-card">
-                    <h2 className="cta-title">
-                        Ready to <span className="text-gradient">Dominate Your Market?</span>
-                    </h2>
-                    <p className="cta-subtitle">
-                        Join the agency that treats your budget like it’s their own. Get a free proposal and ROI projection today.
-                    </p>
-                    <div className="cta-actions">
-                        <Link to="/proposal" className="btn btn-primary btn-lg">Get My Free Proposal</Link>
-                        <Link to="/proposal" className="btn btn-outline btn-lg">Speak with an Expert</Link>
+                <div className="cta-box">
+                    <div className="cta-content">
+                        <h2>Ready to Grow Your Revenue?</h2>
+                        <p>Speak with an expert to see how we can help you achieve your goals.</p>
                     </div>
-                    <p className="cta-note">No commitment required. 100% free consultation.</p>
+                    <div className="cta-actions">
+                        <a href="#" className="btn btn-primary cta-btn">Get a Proposal</a>
+                        <span className="cta-or">OR</span>
+                        <a href="tel:888-601-5359" className="cta-phone">888-601-5359</a>
+                    </div>
                 </div>
             </div>
         </section>

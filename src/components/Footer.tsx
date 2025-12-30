@@ -1,65 +1,57 @@
 import { Link } from 'react-router-dom';
-import { Twitter, Linkedin, Instagram } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer section">
+        <footer className="footer">
             <div className="container">
-                <div className="footer-grid">
-                    <div className="footer-brand">
-                        <h2 className="footer-logo">Dibull<span className="dot">.</span></h2>
-                        <p className="footer-desc">
-                            Revenue-driven digital marketing agency. We help businesses grow through data, design, and technology.
-                        </p>
-                        <div className="social-links">
-                            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-link" aria-label="Twitter">
-                                <Twitter size={20} />
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-link" aria-label="LinkedIn">
-                                <Linkedin size={20} />
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-link" aria-label="Instagram">
-                                <Instagram size={20} />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="footer-links-col">
-                        <h4 className="footer-heading">Services</h4>
-                        <ul className="footer-list">
-                            <li><Link to="/services/seo">SEO Optimization</Link></li>
-                            <li><Link to="/services/ppc">PPC Management</Link></li>
-                            <li><Link to="/services/content">Content Marketing</Link></li>
-                            <li><Link to="/services/social">Social Media</Link></li>
-                            <li><Link to="/services/design">Web Design</Link></li>
+                <div className="footer-top">
+                    <div className="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><Link to="/seo">SEO Services</Link></li>
+                            <li><Link to="/ppc">PPC Management</Link></li>
+                            <li><Link to="/content">Content Marketing</Link></li>
+                            <li><Link to="/social">Social Media</Link></li>
+                            <li><Link to="/web-design">Web Design</Link></li>
                         </ul>
                     </div>
 
-                    <div className="footer-links-col">
-                        <h4 className="footer-heading">Company</h4>
-                        <ul className="footer-list">
+                    <div className="footer-column">
+                        <h4>Knowledgebase</h4>
+                        <ul>
+                            <li><Link to="/blog">Blog</Link></li>
+                            <li><Link to="/guides">Guides</Link></li>
+                            <li><Link to="/tools">Marketing Tools</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className="footer-column">
+                        <h4>Company</h4>
+                        <ul>
                             <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/proposal">Careers</Link></li>
-                            <li><Link to="/results">Case Studies</Link></li>
-                            <li><Link to="/about">Blog</Link></li>
-                            <li><Link to="/proposal">Contact</Link></li>
+                            <li><Link to="/careers">Careers</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
 
-                    <div className="footer-cta">
-                        <h4 className="footer-heading">Ready to grow?</h4>
-                        <p className="footer-cta-text">Speak with a strategist today.</p>
-                        <Link to="/proposal" className="btn btn-primary">Get a Proposal</Link>
-                        <p className="footer-phone">1-888-DIBULL-0</p>
+                    <div className="footer-column footer-brand-col">
+                        <h2 className="footer-logo">Dibull</h2>
+                        <p>Ready to speak with a marketing expert? Give us a ring</p>
+                        <a href="tel:888-601-5359" className="footer-phone">888-601-5359</a>
+                        <div className="footer-socials">
+                            <a href="#" className="social-icon">TW</a>
+                            <a href="#" className="social-icon">IG</a>
+                            <a href="#" className="social-icon">LI</a>
+                        </div>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Dibull. All rights reserved.</p>
                     <div className="footer-legal">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
+                        <Link to="/privacy">Privacy Policy</Link>
+                        <Link to="/terms">Terms of Use</Link>
                     </div>
                 </div>
             </div>
